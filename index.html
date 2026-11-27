@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎓</span>
+            <h2>Smart Campus</h2>
+        </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#clubs">Clubs</a>
+            <a href="#services">Services</a>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </header>
+    <!-- Main Dashboard -->
+    <main id="home" class="dashboard">
+        <section class="welcome">
+            <p class="welcome-tag">UNIVERSITY CAMPUS PORTAL</p>
+            <h1>Welcome to Smart Campus!</h1>
+            <p>
+                Stay connected with campus events, student activities,
+                announcements and essential services.
+            </p>
+        </section>
+        <!-- Dashboard Cards -->
+        <section class="dashboard-grid">
+
+            <article class="card" id="events">
+                <div class="card-icon">📅</div>
+                <h2>Campus Events</h2>
+                <p>
+                    Explore upcoming workshops, seminars,
+                    cultural fests and university events.
+                </p>
+                <a href="#">Explore Events →</a>
+            </article>
+            <article class="card" id="clubs">
+                <div class="card-icon">🎭</div>
+                <h2>Student Clubs</h2>
+                <p>
+                    Discover student communities, join clubs
+                    and participate in exciting activities.
+                </p>
+                <a href="#">Explore Clubs →</a>
+            </article>
+            <article class="card announcement-card" id="announcements">
+                <div class="card-icon">📢</div>
+                <h2>Announcements</h2>
+                <p>
+                    Stay updated with important university
+                    notices, academic updates and news.
+                </p>
+                <a href="https://lms.kluniversity.in/mod/forum/view.php?id=143720"
+                   target="_blank" rel="noopener noreferrer">
+                    View Announcements →
+                </a>
+            </article>
+            <article class="card" id="services">
+                <div class="card-icon">🏫</div>
+                <h2>Campus Services</h2>
+                <p>
+                    Access library facilities, transport,
+                    student support and campus resources.
+                </p>
+                <a href="#">Explore Services →</a>
+            </article>
+        </section>
+        <!-- Footer -->
+         <section class="performance">
+            <h2>Performance & Optimization</h2>
+            <p>This dashboard uses CSS variables for reusable styling,
+                lightweight CSS animations and efficient transitions.
+                Modern CSS features reduce unnecessary code duplication,
+                while responsive layouts ensure smooth rendering across devices.
+            </p>
+        </section>
+        <footer class="footer">
+            <p>© 2026 Smart Campus Dashboard | Designed for Students</p>
+        </footer>
+    </main>
+    <script>
+    const themeButton = document.getElementById("theme-toggle");
+    themeButton.addEventListener("click", function () {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        if (currentTheme === "dark") {
+            document.documentElement.setAttribute("data-theme", "light");
+            themeButton.innerHTML = "🌙 Dark Mode";
+        } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+            themeButton.innerHTML = "☀️ Light Mode";
+        }
+    });
+    </script>
+</body>
+</html>
